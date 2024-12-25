@@ -1,0 +1,308 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+    align-items: center;
+    animation: slideIn 1s ease-out;
+   color: #fff;
+   text-align: center;
+   padding: 170px 20px;
+   /* border-radius: 10px; */
+
+  height: 100vh;
+   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+   position: relative;
+   overflow: hidden;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+/* Dynamic Welcome Message */
+.welcome-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    animation: fadeInOut 3s forwards;
+    z-index: 100;
+}
+
+/* Header and Navigation */
+.header {
+   
+    background: #000000d0;
+    padding: 2px 27px;
+    width: 500px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+    border: 1px solid #ff6a6a;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    margin: 20px;
+    color: #ddd;
+    font-size: 0.9rem;
+}
+
+/* Hero Section */
+/* .hero {
+    align-items: center;
+     margin: 50px auto; 
+    animation: slideIn 1s ease-out;
+    background: linear-gradient(to bottom, #6a0dad, #40066d);
+    color: #fff;
+    text-align: center;
+    padding: 170px 20px; */
+    /* border-radius: 10px; */
+    /* margin: 40px auto;
+   height: 100vh;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+} */
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FF0000; /* Red text */
+        text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3); /* 3D text shadow */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: linear-gradient(to right, #ff6a6a, #ff3dcd);
+    color: #fff;
+    border: 3px solid #222222;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px rgba(255, 61, 205, 0.7);
+}
+
+/* Visual Comparison Section */
+.comparison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 50px;
+}
+
+.video-container, .short-video-container {
+    text-align: center;
+}
+
+.youtube-video iframe {
+    width: 300px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.phone-mockup img {
+    width: 150px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.caption {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+.arrow {
+    font-size: 3rem;
+    animation: bounce 1s infinite;
+    color: #fff;
+}
+
+/* Animations */
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .comparison {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+}
+
+
+
+/* Section Styling */
+.hero-section {
+    background: linear-gradient(to bottom, #6a0dad, #40066d);
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+    /* Speech Bubble */
+    .speech-bubble {
+        width: 140px;
+        height: 100px;
+        background: #FFD700; /* Yellow bubble */
+        border-radius: 30px; /* Rounded edges */
+        position: relative;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* 3D shadow */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      /* Bubble Tail */
+      .speech-bubble::after {
+        content: '';
+        position: absolute;
+        bottom: -30px;
+        left: 70px;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #FFD700; /* Same yellow as bubble */
+        border-bottom: 0;
+        margin-left: -10px;
+      }
+  
+      /* 3D Text */
+      .text {
+        font-size: 50px;
+        font-weight: bold;
+        color: #FF0000; /* Red text */
+        text-shadow: 0px 5px 0px rgba(0, 0, 0, 0.3); /* 3D text shadow */
+      /* Slight bounce animation */
+      animation: text-bounce 2s infinite ease-in-out;
+    }
+
+    /* Bouncy Animation for the Bubble */
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    /* Subtle Bounce for Text */
+    @keyframes text-bounce {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-5px) scale(1.05);
+      }
+    }
+    .iam{
+        font-weight: 100;
+    }
+    .background-section {
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #100f14,
+          #1c1c1c
+        ); /* Gradient Background */
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        font-family: "Courier New", Courier, monospace;
+      }
+      
+      .background-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.05);
+        background-image: linear-gradient(
+            transparent,
+            transparent 98%,
+            rgba(77, 22, 167, 0.26) 98%,
+            rgba(255, 255, 255, 0.1)
+          ),
+          linear-gradient(
+            90deg,
+            transparent,
+            transparent 98%,
+            rgba(67, 17, 206, 0.1) 98%,
+            rgba(255, 255, 255, 0.1)
+          );
+        background-size: 50px 50px; /* Adjust grid size */
+        /* background-repeat: no-repeat; */
+        z-index: 0;
+      }
